@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+
+      <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- CDN FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+  </head>
+  <section>
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">CV KREASI<span> INTI SARANA</span></a>
+
+      <div class="navbar-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="catalog.html">PRODUK</a>
+        <a href="contact.html">CONTACT</a>
+      </div>
+
+      <div class="navbar-extra">
+        
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- NAVBAR SELESAI -->
+
+
+    <!-- CONTENT CONTACT -->
+     <section id="contact" class="contact">
+        <h2><span>Contact</span> Us</h2>
+        <p>Halo pelanggan yang kami hormati semoga sehat selalu, Anda bisa menghubungi kami dengan form dibawah ini. Namun jangan lupa untuk dicek kembali identitasnya dengan benar. Terima kasih</p>
+
+        <div class="row">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63421.50984163552!2d107.41384436438773!3d-6.541329149065792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e690e60454c6667%3A0x7ee7eda6d6e4556f!2sPurwakarta%2C%20Kec.%20Purwakarta%2C%20Kabupaten%20Purwakarta%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1730779225230!5m2!1sid!2sid"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+            <form id="contactForm" name="web-kis-form-contact">
+                <div class="input-group">
+                    <i data-feather="user"></i>
+                    <input type="text" placeholder="nama" name="nama">
+                </div>
+                <div class="input-group">
+                    <i data-feather="mail"></i>
+                    <input type="text" placeholder="email" name="email">
+                </div>
+                <div class="input-group">
+                    <i data-feather="message-circle"></i>
+                    <input type="text" placeholder="pesan" name="pesan">
+                </div>
+                <button type="submit" class="btn">Kirim Pesan</button>
+                <!-- Pesan sukses, awalnya disembunyikan -->
+              <div id="successMessage" >
+               Pesan Berhasil Dikirim!
+              </div>
+              </form>
+             </div>
+
+            
+     </section>
+    <!-- CONTENT CONTACT BERES -->
+     
+     <!-- FOOTER -->
+        <footer>
+            <div class="socials">
+                <a href="https://www.instagram.com/m.alfathputra/?igsh=MWVjcDdxbmttenYzdQ%3D%3D"><i data-feather="instagram"></i></a>
+                <a href="#"><i data-feather="facebook"></i></a>
+                <a href="https://wa.link/l8rjri"><i data-feather="phone-call"></i></a>
+                
+            </div>
+            <div class="links">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="catalog.html">PRODUK</a>
+            <a href="contact.html">CONTACT</a>
+
+            </div>
+            <div class="credit">
+                <p>Created by <a href="">alfathputra</a>.| &copy; 2024.</p>
+            </div>
+        </footer>
+
+     <!-- FOOTER BERES -->
+
+     <!-- Pesan sukses, awalnya disembunyikan -->
+  <div id="successMessage" style="display:none;">
+    Pesan Berhasil Dikirim!
+  </div>
+       
+
+    <!-- feather icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My javascript -->
+    <script src="js/ganteng.js"></script>
+
+
+    <!-- SCRIPT KONTAK GITHUB -->
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzG0FahO1geTgyMVrPbOR_LLWaaL7xmTNoo8-KBm-32fy9KxPUCZZOTA5Pl6FW93xel/exec'
+      const form = document.forms['web-kis-form-contact']
+
+      form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+    <!-- SCRIPT GITHUB SELESAI -->
+
+  </body>
+</html>
